@@ -1,15 +1,15 @@
 {
   "brand": {
     "agency": {
-      "name": "Agency",
-      "desc": "Nirwana Agency - HTML5 Bootstrap Template",
-      "prefix": "nirwana",
-      "footerText": "Nirwana Theme 2022",
-      "logoText": "Nirwana Theme",
-      "projectName": "Agency",
-      "url": "nirwana.indisains.com/agency",
+      "name": "Creometry",
+      "desc": "A collaborative container platform",
+      "prefix": "prefix",
+      "footerText": "Creometry 2023",
+      "logoText": "Creometry",
+      "projectName": "Creometry",
+      "url": "creometry.com",
       "img": "/images/logo-agency.png",
-      "notifMsg": "Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula"
+      "notifMsg": "Notification message-1"
     }
   },
   "link": {
