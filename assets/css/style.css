@@ -1,9 +1,3 @@
-/**
-* Template Name: Rapid - v4.7.1
-* Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -328,37 +322,36 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
   background-size: cover;
-  padding-top: 10px;
+  padding-top: 110px;
 }
 @media (max-width: 991px) {
   #hero {
     height: auto;
-    padding: 10px 0 60px 0;
+    padding: 100px 0 60px 0;
   }
   #hero .container {
     height: auto !important;
   }
   #hero .intro-img {
-    width: 100%;
-    margin-left: 400000px;
+    width: 80%;
   }
 }
 @media (min-width: 992px) {
   #hero .intro-info {
-    padding-top: 0px;
+    padding-top: 100px;
   }
 }
 @media (max-width: 991px) {
   #hero .intro-info {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
   }
 }
 #hero .intro-info h2 {
   color: #413e66;
-  margin-bottom: 20px;
-  font-size: 40px;
-  font-weight: 650;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
 }
 #hero .intro-info h2 span {
   color: #1bb1dc;
@@ -371,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .intro-info .btn-get-started, #hero .intro-info .btn-services {
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
