@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
   background-size: cover;
-  padding-top: 110px;
+  padding-top: 10px;
 }
 @media (max-width: 991px) {
   #hero {
@@ -333,25 +333,26 @@ h1, h2, h3, h4, h5, h6 {
     height: auto !important;
   }
   #hero .intro-img {
-    width: 80%;
+    width: auto;
+    
   }
 }
 @media (min-width: 992px) {
   #hero .intro-info {
-    padding-top: 100px;
+    padding-top: 0px;
   }
 }
 @media (max-width: 991px) {
   #hero .intro-info {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 0px;
   }
 }
 #hero .intro-info h2 {
   color: #413e66;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 650;
 }
 #hero .intro-info h2 span {
   color: #1bb1dc;
@@ -364,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .intro-info .btn-get-started, #hero .intro-info .btn-services {
   font-family: "Montserrat", sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -390,10 +391,10 @@ section {
 /* Sections Header
 --------------------------------*/
 .section-header h3 {
-  font-size: 36px;
+  font-size: 30px;
   color: #413e66;
   text-align: center;
-  font-weight: 700;
+  font-weight: 650;
   position: relative;
   font-family: "Montserrat", sans-serif;
 }
