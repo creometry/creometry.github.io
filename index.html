@@ -933,16 +933,17 @@
               <p>Join our Slack chat, our GitHub repository or send us a instant message.</p>
               <form id="contact-form" action="https://formkeep.com/f/204bab3e3c34" accept-charset="UTF-8" enctype="multipart/form-data" method="post" role="form" class="php-email-form">
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" required>
+                  <input type="text" name="Name" class="form-control" id="Name" placeholder="John Doe" maxlength="30" required>
+                </div>
+                type="email" name="Email" id="Email" required="required" placeholder="johndoe@company.com" maxlength="50"
+                <div class="form-group mt-3">
+                  <input type="email" class="form-control" name="Email" id="Email" placeholder="johndoe@company.com" maxlength="50" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject" maxlength="100" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="Message" rows="5" placeholder="Type your message here" maxlength="1000"required></textarea>
                 </div>
                 <input type="hidden" name="utf8" value="✓">
                 <div class="my-3">
@@ -966,7 +967,7 @@
                     })
                     .then(() => {
                       var csubmission = document.getElementById('subscribers');
-                      csubmission.innerHTML = "Your message has been sent!"";
+                      csubmission.innerHTML = "Your message has been sent!";
                     })
                   });
                 });
