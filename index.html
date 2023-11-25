@@ -43,8 +43,8 @@
           <li><a class="nav-link scrollto" href="#academy">learn</a></li>
           <li><a class="nav-link scrollto" href="#cloud">build</a></li>
           <li><a class="nav-link scrollto" href="#incentives">earn</a></li>
-          <li><a class="nav-link scrollto" href="#vessel">contribute</a></li>
-          <li class="dropdown"><a href="#about"><span>Ecosystem</span> <i class="bi bi-chevron-down"></i></a>
+          <!-- <li><a class="nav-link scrollto" href="#vessel">use-cases</a></li> -->
+          <li class="dropdown active"><a href="#about"><span>Ecosystem</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#academy">Academy</a></li>
               <li><a href="#vessel">Community Incubator</a></li>
@@ -53,7 +53,7 @@
               <li><a href="#exchange">Value Exchange</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#services"><span>Enterprise</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown active"><a href="#services"><span>Enterprise</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#academy">Training</a></li>
               <li><a href="#consulting">Consulting</a></li>
@@ -70,7 +70,7 @@
         <a href="https://join.slack.com/t/creometry/shared_invite/zt-13y8zzm8w-kOF_8Pc2bShVlI~VOMbeww" class="slack"><i class="bi bi-slack"></i></a>
         <!-- <a href="https://twitter.com/creometry" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="https://www.facebook.com/creometry" class="facebook"><i class="bi bi-facebook"></i></a> -->
-        <a href="https://linkedin.com/company/creometrie" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <!-- <a href="https://linkedin.com/company/creometrie" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
         <a href="#contact" class="envelope-open-fill"><i class="bi bi-envelope-open-fill"></i></a>
       </div>
 
@@ -931,10 +931,9 @@
 
               <h4>Get in touch</h4>
               <p>Join our Slack chat, our GitHub repository or send us a instant message.</p>
-
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form id="contact-form" action="https://formkeep.com/f/204bab3e3c34" accept-charset="UTF-8" enctype="multipart/form-data" method="post" role="form" class="php-email-form">
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" required>
                 </div>
                 <div class="form-group mt-3">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -945,16 +944,33 @@
                 <div class="form-group mt-3">
                   <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
-
+                <input type="hidden" name="utf8" value="✓">
                 <div class="my-3">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <!-- <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
                 </div>
 
                 <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
               </form>
-
+              <script>
+                window.addEventListener("load", function() {
+                  const cform = document.getElementById('contact-form');
+                  cform.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    const data = new FormData(cform);
+                    const action = e.target.action;
+                    fetch(action, {
+                      method: 'POST',
+                      body: data,
+                    })
+                    .then(() => {
+                      var csubmission = document.getElementById('subscribers');
+                      csubmission.innerHTML = "Your message has been sent!"";
+                    })
+                  });
+                });
+              </script>
             </div>
 
           </div>
