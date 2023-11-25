@@ -947,7 +947,7 @@
                 </div>
                 <input type="hidden" name="utf8" value="✓">
                 <div class="my-3">
-                  <div class="loading">Loading</div>
+                  <div id="sent" class="loading">Loading</div>
                   <!-- <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div> -->
                 </div>
@@ -956,17 +956,17 @@
               </form>
               <script>
                 window.addEventListener("load", function() {
-                  const cform = document.getElementById('contact-form');
-                  cform.addEventListener("submit", function(e) {
+                  const contact = document.getElementById('contact-form');
+                    contact.addEventListener("submit", function(e) {
                     e.preventDefault();
-                    const data = new FormData(cform);
+                    const data = new FormData(contact);
                     const action = e.target.action;
                     fetch(action, {
                       method: 'POST',
                       body: data,
                     })
                     .then(() => {
-                      var csubmission = document.getElementById('subscribers');
+                      var csubmission = document.getElementById('sent');
                       csubmission.innerHTML = "Your message has been sent!";
                     })
                   });
