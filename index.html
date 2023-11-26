@@ -945,10 +945,10 @@
                   <textarea class="form-control" name="Message" rows="5" placeholder="Type your message here" maxlength="1000"required></textarea>
                 </div>
                 <input type="hidden" name="utf8" value="✓">
-                <div class="my-3">
+                <div id="sent" class="my-3">
                   <div id="sent" class="loading">Loading</div>
-                  <!-- <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
 
                 <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
@@ -966,7 +966,7 @@
                     })
                     .then(() => {
                       var csubmission = document.getElementById('sent');
-                      csubmission.innerHTML = "Your message has been sent!";
+                      csubmission.innerHTML = "&#10003 Your message has been sent!";
                     })
                   });
                 });
