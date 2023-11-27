@@ -418,7 +418,25 @@ section {
 .section-bg {
   background: #f5f8fd;
 }
-
+/* Button similar to get started
+--------------------------------*/
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 2px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1bb1dc;
+}
+.btn:hover {
+  background: #0a98c0;
+  color: #fff;
+}
 /* About Us Section
 --------------------------------*/
 #about {
