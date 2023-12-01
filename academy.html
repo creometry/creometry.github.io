@@ -26,8 +26,6 @@
 
 	<link rel="stylesheet" href="assets/vendor/bootstrap/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="css/style.css">
-
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -46,9 +44,9 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">overview</a></li>
-          <li><a class="nav-link scrollto" href="#">courses</a></li>
-          <li><a class="nav-link scrollto" href="#">schedule</a></li>
-          <li><a class="nav-link scrollto" href="#">Contribute</a></li>
+          <!-- <li><a class="nav-link scrollto" href="coming-soon.html">courses</a></li> -->
+          <li><a class="nav-link scrollto" href="#schedule">schedule</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#contribute">Contribute</a></li> -->
           <!-- <li class="dropdown"><a href="#about"><span>Ecosystem</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="academy.html">Academy</a></li>
@@ -65,13 +63,13 @@
               <li><a href="#consulting">Development</a></li>
             </ul>
           </li> -->
-          <li><a class="nav-link scrollto" href="#">Enterprise Teams</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#">Team training</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="social-links">
-        <a href="https://github.com/creometry" class="instagram"><i class="bi bi-github"></i></a>
+        <a href="https://github.com/creometry-" class="instagram"><i class="bi bi-github"></i></a>
         <a href="https://join.slack.com/t/creometry/shared_invite/zt-13y8zzm8w-kOF_8Pc2bShVlI~VOMbeww" class="slack"><i class="bi bi-slack"></i></a>
         <!-- <a href="https://twitter.com/creometry" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="https://www.facebook.com/creometry" class="facebook"><i class="bi bi-facebook"></i></a> -->
@@ -92,7 +90,7 @@
           <h4>Creometry academy offers hands-on training programs aimed at IT professionals, to help them prepare for certification and enhance their skills to take on new challenges.</h4>
           <br>
           <div>
-            <a href="#about" class="btn-get-started scrollto">view schedule</a>
+            <a href="#schedule" class="btn-get-started scrollto">view schedule</a>
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;<a href="#about" class="btn-get-started scrollto">view courses</a> -->
           </div>
         </div>
@@ -120,168 +118,168 @@
       </div>
     </section> -->
     <!-- End Breadcrumbs -->
-    <section id="schedule" class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6 text-center mb-4">
-            <h1><strong>Schedule</strong></h1>
-          </div>
+    <section id="schedule">
+      
+        <div class="container text-center">
+          <h1><strong>Schedule</strong></h1>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="h5 mb-4 text-center">Upcoming instructor-led trainign sessions</h3>
-            <div class="container">
-              <label for="filter">Filters:</label>
-              <select id="topicFilter">
-                  <option value="all">All Topics</option>
-                  <option value="DevOps">DevOps</option>
-                  <option value="Cloud">Cloud providers</option>
-                  <option value="kubernetes">Kubernetes</option>
-                  <option value="Programming">Programming</option>
-                                   
-                  <!-- Add more filter options as needed -->
-              </select>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <select id="levelFilter">
-                <option value="all">All Levels</option>
-                <option value="Beginner">Beginner</option>
-                <option value="Intermediate">Intermediate</option>
-                <option value="Advanced">Advanced</option>
+        
+        <h3 class="text-center">Upcoming instructor-led trainign sessions</h3>
+        <div class="container">
+          <label for="filter">Filters:&nbsp;&nbsp;</label>
+          <select id="topicFilter">
+              <option value="all">All Topics</option>
+              <option value="DevOps">DevOps</option>
+              <option value="Cloud">Cloud providers</option>
+              <option value="kubernetes">Kubernetes</option>
+              <option value="Programming">Programming</option>
+                                
+              <!-- Add more filter options as needed -->
+          </select>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <select id="levelFilter">
+            <option value="all">All Levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            
+            <!-- Add more filter options as needed -->
+          </select>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <select id="deliveryFilter">
+            <option value="all">All Delivery Methods</option>
+            <option value="Online">Online</option>
+            <option value="In person">In person</option>
+            <option value="Hybrid">Hybrid</option>
+            
+            <!-- Add more filter options as needed -->
+          </select>
+        </div> 
+        <div class="container">
+          <table id="accordion">
+            <thead>
+              
+              <th><center>Date</center></th>
+              <th><center>Topic</center></th>
+              <th><center>Type</center></th>
+              <th><center>Schedule</center></th>
+              <th><center>Duration</td>
+              <th><center>Delivery</center></th>
+              <th><center>Level</center></th>
+              <th><center>Price (TND TTC)</th>
+            
+            </thead>
+            <tbody>
+              <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <th scope="row"><center>Dec 18, 2023</center></th>
+                <td>Intro to Kubernetes&nbsp;<a href="#collapseOne">Details</a></td>
+                <td><center>Kubernetes</center></td>
+                <td><center>16-18H GMT+1<br>Mon to Fri</center></td>
+                <td><center>10 Hrs</center></td>
+                <td><center>Online</center></td>
+                <td><center>Intermediate</center></td>
+                <td><a class="btn-pay" href="https://api.konnect.network/zPd7bwddM">399</a></td>
+              </tr>
+              <tr>
+                <td colspan="8" id="collapseOne" class="collapse acc" data-parent="#accordion">
+                  <p>Is your team beginning to use Kubernetes for container orchestration? Do you need guidelines on how to start transforming your organization with Kubernetes and cloud native patterns? Would you like to simplify software container orchestration and find a way to grow your use of Kubernetes without adding infrastructure complexity? Then this is the course for you!</p>
+                  <p>You’ll learn:</p>
+                  <ul>
+                    <li>Kubernetes architecture</li>                 
+                    <li>Workload types</li>
+                    <li>How to access the cluster</li>
+                    <li>Secrets and ConfigMaps</li>
+                    <li>Persistent Volumes and Persistent Volume Claims</li>
+                    <li>And much more!</li>
+                  </ul>
+                  <p>This course aligns with the requirements for the&nbsp;<a href="https://www.cncf.io/certification/expert/kcna/">KCNA</a>, <a href="https://www.cncf.io/certification/expert/ckad/">CKAD</a>&nbsp;and parts of&nbsp;<a href="https://www.cncf.io/certification/expert/cka/">CKA</a>&nbsp;exams from the Cloud Native Computing Foundation.</p>
+                  <a class="btn-enroll" href="https://api.konnect.network/zPd7bwddM">Enroll Now!</a>
+                </td>
+              </tr>
+              <tr data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">
+                <th scope="row"><center>Dec 25, 2023</center></th>
+                <td>CI/CD technologies&nbsp;<a href="#collapseTwo">Details</a></td>
+                <td><center>DevOps</center></td>
+                <td><center>16-18H GMT+1<br>Mon to Fri</center></td>
+                <td><center>10 Hrs</center></td>
+                <td><center>Online</center></td>
+                <td><center>Beginner to intermediate</center></td>
                 
-                <!-- Add more filter options as needed -->
-              </select>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <select id="deliveryFilter">
-                <option value="all">All Delivery Methods</option>
-                <option value="Online">Online</option>
-                <option value="In person">In person</option>
-                <option value="Hybrid">Hybrid</option>
-                
-                <!-- Add more filter options as needed -->
-              </select>
-            <div class="table-wrap">
-              <table class="table myaccordion table-hover" id="accordion">
-                <thead>
-                  <tr>
-                    <th><center>Date</center></th>
-                    <th><center>Topic</center></th>
-                    <th><center>Type</center></th>
-                    <th><center>Schedule</center></th>
-                    <th><center>Delivery</center></th>
-                    <th><center>Level</center></th>
-                    <th><center>Price (TND TTC)</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <th scope="row"><center>Dec 18, 2023</center></th>
-                    <td>Intro to Kubernetes&nbsp;<a href="#collapseOne">Details</a></td>
-                    <td><center>Kubernetes</center></td>
-                    <td><center>Total 10 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
-                    <td><center>Online<center></td>
-                    <td><center>Intermediate</center></td>
-                    <td><center>299</center></td>
-                    <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
-                  </tr>
-                  <tr>
-                    <td colspan="8" id="collapseOne" class="collapse show acc" data-parent="#accordion">
-                      <p>Is your team beginning to use Kubernetes for container orchestration? Do you need guidelines on how to start transforming your organization with Kubernetes and cloud native patterns? Would you like to simplify software container orchestration and find a way to grow your use of Kubernetes without adding infrastructure complexity? Then this is the course for you!</p>
-                      <p>You’ll learn:</p>
-                      <ul>
-                        <li>Kubernetes architecture</li>                 
-                        <li>Workload types</li>
-                        <li>How to access the cluster</li>
-                        <li>Secrets and ConfigMaps</li>
-                        <li>Persistent Volumes and Persistent Volume Claims</li>
-                        <li>And much more!</li>
-                      </ul>
-                      <p>This course aligns with the requirements for the&nbsp;<a href="https://www.cncf.io/certification/expert/kcna/">KCNA</a>, <a href="https://www.cncf.io/certification/expert/ckad/">CKAD</a>&nbsp;and parts of&nbsp;<a href="https://www.cncf.io/certification/expert/cka/">CKA</a>&nbsp;exams from the Cloud Native Computing Foundation.</p>
-                      <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
-                    </td>
-                  </tr>
-                  <tr data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">
-                    <th scope="row"><center>Dec 25, 2023</center></th>
-                    <td>CI/CD technologies&nbsp;<a href="#collapseTwo">Details</a></td>
-                    <td><center>DevOps</center></td>
-                    <td><center>Total 10 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
-                    <td><center>Online<center></td>
-                    <td><center>Beginner to intermediate</center></td>
-                    <td><center>299</center></td>
-                    <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
-                  </tr>
-                  <tr>
-                    <td colspan="8" id="collapseTwo" class="collapse acc" data-parent="#accordion">
-                      <p>This course will teach you to master CI/CD fundamentals pipeline creation, configuration, task automation, triggers, and extensions. These skills enable you to become proficient pipeline creation by building, testing, and deploying code.</p>
-                      <p>You’ll learn:</p>
-                      <ul>
-                        <li>GitHub Actions.</li>                 
-                        <li>Gitlab CI</li>
-                        <li>Tekton</li>
-                        <li>GitOps with ArgoCD</li>
-                      </ul>
-                      <p>CI/CD Skills are valuable for DevOps, CI/CD Engineer, or Software Developer roles.</p>
-                      <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
-                    </td>
-                    <tr data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">
-                      <th scope="row"><center>Jan 8, 2024</center></th>
-                      <td>Google Cloud Platform&nbsp;<a href="#collapseThree">Details</a></td>
-                      <td><center>Cloud</center></td>
-                      <td><center>Total 36 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
-                      <td><center>Online<center></td>
-                      <td><center>Beginner to intermediate</center></td>
-                      <td><center>899</center></td>
-                      <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
-                    </tr>
-                    <tr>
-                      <td colspan="8" id="collapseThree" class="collapse acc" data-parent="#accordion">
-                        <p>This course is a series of hands-on workshops that will introduce you to a variety of Google cloud services and how to pick, configure, and deploy your code onto the right cloud solution.</p>
-                        <p>You’ll learn:</p>
-                        <ul>
-                          <li>VPC Networking.</li>                 
-                          <li>Compute Engine</li>
-                          <li>Cloud Functions</li>
-                          <li>Cloud Run</li>
-                          <li>Kubernetes Engine</li>
-                          <li>And much more!</li>
-                        </ul>
-                        <p>This course aligns with the requirements for the&nbsp;<a href="https://cloud.google.com/learn/certification/cloud-engineer">Cloud Associate Engineer</a>, <a href="https://cloud.google.com/learn/certification/cloud-developer">Professional Cloud Developer</a>&nbsp;and&nbsp;<a href="https://cloud.google.com/learn/certification/cloud-devops-engineer">Professional Cloud DevOps Engineer</a>&nbsp; certification exams from Google.</p>
-                        <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
-                      </td>
-                    </tr>
-                  </tr>
-                  <tr data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">
-                    <th scope="row"><center>TBA</center></th>
-                    <td>Go Programming Language&nbsp;<a href="#collapseFour">Details</a></td>
-                    <td><center>Programming</center></td>
-                    <td><center>Total 36 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
-                    <td><center>Online<center></td>
-                    <td><center>Beginner</center></td>
-                    <td><center>699</center></td>
-                    <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
-                  </tr>
-                  <tr>
-                    <td colspan="8" id="collapseFour" class="collapse acc" data-parent="#accordion">
-                      <p>Go (or Golang) is an open source programming language designed to build fast, reliable, and efficient software at scale. This course is a series of hands-on workshops that will teach you how to write Go applications and get familiar with basic concepts, Data Types, Error Handling, etc.</p>
-                      <p>You’ll learn:</p>
-                      <ul>
-                        <li>Variables and Data Types</li>                 
-                        <li>Functions, methods and Interfaces</li>
-                        <li>Standard Library Packages</li>
-                        <li>Go Tools</li>
-                        <li>Microservices and REsT APIs with Go</li>
-                      </ul>
-                      <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
-                    </td>
-                  </tr>
-                </tr>
+                <td><a class="btn-pay" href="https://api.konnect.network/Mitjta1B7">299</a></td>
+              </tr>
+              <tr>
+                <td colspan="8" id="collapseTwo" class="collapse acc" data-parent="#accordion">
+                  <p>This course will teach you to master CI/CD fundamentals pipeline creation, configuration, task automation, triggers, and extensions. These skills enable you to become proficient pipeline creation by building, testing, and deploying code.</p>
+                  <p>You’ll learn:</p>
+                  <ul>
+                    <li>GitHub Actions.</li>                 
+                    <li>Gitlab CI</li>
+                    <li>Tekton</li>
+                    <li>GitOps with ArgoCD</li>
+                  </ul>
+                  <p>CI/CD Skills are valuable for DevOps, CI/CD Engineer, or Software Developer roles.</p>
+                  <a class="btn-enroll" href="https://api.konnect.network/Mitjta1B7">Enroll Now!</a>
+                </td>
+                <tr data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">
+                  <th scope="row"><center>Jan 8, 2024</center></th>
+                  <td>Google Cloud Platform&nbsp;<a href="#collapseThree">Details</a></td>
+                  <td><center>Cloud</center></td>
+                  <td><center>16-18H GMT+1<br>Mon to Fri</center></td>
+                  <td><center>36 Hrs</center></td>
+                  <td><center>Online</center></td>
+
+                  <td><center>Beginner to intermediate</center></td>
                   
-              </table>
-              <script src="assets/js/table.js"></script>
-            </div>
-          </div>
+                  <td><a class="btn-pay" href="https://api.konnect.network/a7qJdRa@G">899</a></td>
+                </tr>
+                <tr>
+                  <td colspan="8" id="collapseThree" class="collapse acc" data-parent="#accordion">
+                    <p>This course is a series of hands-on workshops that will introduce you to a variety of Google cloud services and how to pick, configure, and deploy your code onto the right cloud solution.</p>
+                    <p>You’ll learn:</p>
+                    <ul>
+                      <li>VPC Networking.</li>                 
+                      <li>Compute Engine</li>
+                      <li>Cloud Functions</li>
+                      <li>Cloud Run</li>
+                      <li>Kubernetes Engine</li>
+                      <li>And much more!</li>
+                    </ul>
+                    <p>This course aligns with the requirements for the&nbsp;<a href="https://cloud.google.com/learn/certification/cloud-engineer">Cloud Associate Engineer</a>, <a href="https://cloud.google.com/learn/certification/cloud-developer">Professional Cloud Developer</a>&nbsp;and&nbsp;<a href="https://cloud.google.com/learn/certification/cloud-devops-engineer">Professional Cloud DevOps Engineer</a>&nbsp; certification exams from Google.</p>
+                    <a class="btn-enroll" href="https://api.konnect.network/a7qJdRa@G">Enroll Now!</a>
+                  </td>
+                </tr>
+              
+              <tr data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">
+                <th scope="row"><center>TBA</center></th>
+                <td>Go Programming Language&nbsp;<a href="#collapseFour">Details</a></td>
+                <td><center>Programming</center></td>
+                <td><center>16-18H GMT+1<br>Mon to Fri</center></td>
+                <td><center>36 Hrs</center></td>
+                <td><center>Online</center></td>
+                <td><center>Beginner</center></td>
+                
+                <td><a class="btn-pay" href="#">TBA</a></td>
+              </tr>
+              <tr>
+                <td colspan="8" id="collapseFour" class="collapse acc" data-parent="#accordion">
+                  <p>Go (or Golang) is an open source programming language designed to build fast, reliable, and efficient software at scale. This course is a series of hands-on workshops that will teach you how to write Go applications and get familiar with basic concepts, Data Types, Error Handling, etc.</p>
+                  <p>You’ll learn:</p>
+                  <ul>
+                    <li>Variables and Data Types</li>                 
+                    <li>Functions, methods and Interfaces</li>
+                    <li>Standard Library Packages</li>
+                    <li>Go Tools</li>
+                    <li>Microservices and ReST APIs with Go</li>
+                  </ul>
+                  <a class="btn-enroll" href="#">TBD</a>
+                </td>
+              </tr>
+            </tr>
+              
+          </table>
+          <script src="assets/js/table.js"></script>
         </div>
-      </div>
+      
     </section>
   	<script src="assets/js/table/jquery.min.js"></script>
     <script src="assets/js/table/popper.js"></script>
@@ -304,7 +302,36 @@
       </div>
     </section>
     <!--  End Call To Action Section -->
-  
+    <!-- ======= About Section ======= -->
+    <!-- <section id="course" class="course">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/about-ecosystem.png" alt="about-ecosystem">
+            </div>
+          </div> 
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+              <h2>Courses</h2>
+              <p>Creometry is a socio-technical ecosystem that applies commoning<a href="#faq"><sup>1</sup></a> practices to digital infrastructure, specifiacally compute infrastructure<a href="#faq"><sup>2</sup></a> (aka. the cloud).</p>
+              <p>Community volunteers share computing resources and host cloud applications, in exchange for digital value incentives<a href="#faq"><sup>3</sup></a>.</p>
+               <h3>Other than the sun, what's up?</h3>
+              <p>In order to develop the ecosystem and grow the community, the following services are intended to support individuals and projects, and govern economic interests:</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> An academy serving as a technology training ground for developers and independent contributors.</li>
+                <li><i class="bi bi-check-circle"></i> A open community incubator to support the development of project initiatives.</li>
+                <li><i class="bi bi-check-circle"></i> An incentive-driven economic model<a href="#faq"><sup>3</sup></a>  to establish economic governance mecanisms.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+    <!-- End course Section -->
   </main>
   <!-- End #main -->
 

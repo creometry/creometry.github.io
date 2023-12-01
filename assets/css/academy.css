@@ -1,0 +1,40 @@
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+/* ... (previous CSS code) ... */
+
+#accordion {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  display: none; /* Hide the table initially if needed */
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* New styles for table rows */
+tr {
+  transition: background-color 0.3s;
+}
+
+/* Hover effect: Light gray background on hover */
+tr:hover {
+  background-color: #adadad;
+}
+
+/* Remove borders on table rows */
+tr, th, td {
+  border: none;
+}
+
+/* Optional: Add a border-bottom to the header row for separation */
+th {
+  border-bottom: 1px solid #adadad;
+}
