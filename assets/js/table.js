@@ -1,38 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
     const table = document.getElementById("accordion");
-    const filterDropdown = document.getElementById("filter");
-
+    const filterDropdown1 = document.getElementById("topicFilter");
+    const filterDropdown2 = document.getElementById("deliveryFilter");
+    const filterDropdown3 = document.getElementById("levelFilter");
+ 
     // Show the table after the page has loaded
     table.style.display = "table";
-
-    // Add event listener to the filter dropdown
-    filterDropdown.addEventListener("change", function () {
+ 
+    // Add event listeners to the filter dropdowns
+    filterDropdown1.addEventListener("change", function () {
         filterTable();
     });
-
-    // Make the table sortable using the Sortable library
-    new Sortable(table, {
-        headers: "thead th",
-        animation: 150,
-        // Add more options as needed
+ 
+    filterDropdown2.addEventListener("change", function () {
+        filterTable();
     });
+ 
+    filterDropdown3.addEventListener("change", function () {
+        filterTable();
+    });    
 
     function filterTable() {
-        const filterValue = filterDropdown.value.toLowerCase();
+        const filterValue1 = filterDropdown1.value.toLowerCase();
+        const filterValue2 = filterDropdown2.value.toLowerCase();
+        const filterValue3 = filterDropdown3.value.toLowerCase();
         const rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-
+ 
         for (const row of rows) {
             const cells = row.getElementsByTagName("td");
-            let shouldShow = filterValue === "all";
-
-            for (const cell of cells) {
-                if (cell.innerHTML.toLowerCase().includes(filterValue)) {
-                    shouldShow = true;
-                    break;
-                }
+            let shouldShow = true;
+ 
+            if (filterValue1 !== "all" && !row.innerHTML.toLowerCase().includes(filterValue1)) {
+                shouldShow = false;
             }
 
+            if (filterValue2 !== "all" && !row.innerHTML.toLowerCase().includes(filterValue2)) {
+                shouldShow = false;
+            }
+ 
+            if (filterValue3 !== "all" && !row.innerHTML.toLowerCase().includes(filterValue3)) {
+                shouldShow = false;
+            }
+ 
             row.style.display = shouldShow ? "" : "none";
         }
     }
-});
+ });
+ 
