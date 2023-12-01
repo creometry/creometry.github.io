@@ -124,7 +124,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center mb-4">
-            <h2 class="heading-section">Schedule</h2>
+            <h1><strong>Schedule</strong></h1>
           </div>
         </div>
         <div class="row">
@@ -132,123 +132,125 @@
             <h3 class="h5 mb-4 text-center">Upcoming instructor-led trainign sessions</h3>
             <div class="container">
               <label for="filter">Filters:</label>
-              <select id="topicfilter">
-                  <option value="all">All</option>
+              <select id="filter">
+                  <option value="all">All Topics</option>
                   <option value="DevOps">DevOps</option>
                   <option value="Cloud">Cloud providers</option>
                   <option value="kubernetes">Kubernetes</option>
-                  <option value="Level">Level</option>
-                 
+                  <option value="App development">App development</option>
+                                   
                   <!-- Add more filter options as needed -->
               </select>
-              <select id="pricefilter">
-                <option value="all">All</option>
-                <option value="Type">DevOps</option>
-                <option value="all">Cloud providers</option>
-                <option value="all">Kubernetes</option>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <select id="filter">
+                <option value="all">All Levels</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
                 
                 <!-- Add more filter options as needed -->
               </select>
-              <select id="deliveryfilter">
-                <option value="all">All</option>
-                <option value="Type">Online</option>
-                <option value="all">In person</option>
-                <option value="all">Hybrid</option>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <select id="filter">
+                <option value="all">All Delivery Methods</option>
+                <option value="Online">Online</option>
+                <option value="In person">In person</option>
+                <option value="Hybrid">Hybrid</option>
                 
                 <!-- Add more filter options as needed -->
               </select>
             <div class="table-wrap">
               <table class="table myaccordion table-hover" id="accordion">
-                <thead  style="text-align: center;">
+                <thead>
                   <tr>
-                    <th>Start Date</th>
-                    <th>Topic</th>
-                    <th>Type</th>
-                    <th>Schedule</th>
-                    <th>Delivery</th>
-                    <th>Level</th>
-                    <th>Price (TND TTC)</th>
+                    <th><center>Date</center></th>
+                    <th><center>Topic</center></th>
+                    <th><center>Type</center></th>
+                    <th><center>Schedule</center></th>
+                    <th><center>Delivery</center></th>
+                    <th><center>Level</center>Level</th>
+                    <th><center>Price (TND/TTC)</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <th scope="row">Dec 18, 2023</th>
-                    <td>Intro to Kubernetes <a href="#collapseOne">Details</a></td>
-                    <td>Cloud</td>
-                    <td><center><time>19:00</time> to <time>21:00</time> GMT+1<br>Mon to Fri</center></td>
-                    <td>Online</td>
-                    <td>Intermediate</td>
-                    <td>250</td>
-                    <td>
-                      <a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a>
-                    </td>
+                    <th scope="row"><center>Dec 18, 2023</center></th>
+                    <td>Intro to Kubernetes&nbsp;<a href="#collapseOne">Details</a></td>
+                    <td><center>Kubernetes</center></td>
+                    <td><center>Total 10 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
+                    <td><center>Online<center></td>
+                    <td><center>Intermediate</center></td>
+                    <td><center>299</center></td>
+                    <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
                   </tr>
                   <tr>
                     <td colspan="8" id="collapseOne" class="collapse show acc" data-parent="#accordion">
                       <p>Is your team beginning to use Kubernetes for container orchestration? Do you need guidelines on how to start transforming your organization with Kubernetes and cloud native patterns? Would you like to simplify software container orchestration and find a way to grow your use of Kubernetes without adding infrastructure complexity? Then this is the course for you!</p>
                       <p>You’ll learn:</p>
                       <ul>
-                      <li>Kubernetes architecture</li>                 
-                      <li>Workload types</li>
-                      <li>How to access the cluster</li>
-                      <li>Secrets and ConfigMaps</li>
-                      <li>Persistent Volumes and Persistent Volume Claims</li>
-                      <li>And much more!</li>
+                        <li>Kubernetes architecture</li>                 
+                        <li>Workload types</li>
+                        <li>How to access the cluster</li>
+                        <li>Secrets and ConfigMaps</li>
+                        <li>Persistent Volumes and Persistent Volume Claims</li>
+                        <li>And much more!</li>
                       </ul>
                       <p>This course aligns with the requirements for the&nbsp;<a href="https://www.cncf.io/certification/expert/kcna/">KCNA</a>, <a href="https://www.cncf.io/certification/expert/ckad/">CKAD</a>&nbsp;and parts of&nbsp;<a href="https://www.cncf.io/certification/expert/cka/">CKA</a>&nbsp;exams from the Cloud Native Computing Foundation.</p>
                       <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
                     </td>
                   </tr>
-  
                   <tr data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">
-                    <th scope="row">2</th>
-                    <td>Laptop Technology AS2020</td>
-                    <td>$200.00</td>
-                    <td>2</td>
-                    <td>$400.00</td>
-                    <td>
-                      <i class="fa" aria-hidden="false"></i>
-                    </td>
+                    <th scope="row"><center>Dec 25, 2023</center></th>
+                    <td>CI/CD technologies&nbsp;<a href="#collapseTwo">Details</a></td>
+                    <td><center>DevOps</center></td>
+                    <td><center>Total 10 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
+                    <td><center>Online<center></td>
+                    <td><center>Beginner to intermediate</center></td>
+                    <td><center>299</center></td>
+                    <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
                   </tr>
                   <tr>
-                    <td colspan="6" id="collapseTwo" class="collapse acc" data-parent="#accordion">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
+                    <td colspan="8" id="collapseTwo" class="collapse acc" data-parent="#accordion">
+                      <p>This course will teach you to master CI/CD fundamentals pipeline creation, configuration, task automation, triggers, and extensions. These skills enable you to become proficient pipeline creation by building, testing, and deploying code.</p>
+                      <p>You’ll learn:</p>
+                      <ul>
+                        <li>GitHub Actions.</li>                 
+                        <li>Gitlab CI</li>
+                        <li>Tekton</li>
+                        <li>GitOps with ArgoCD</li>
+                      </ul>
+                      <p>CI/CD Skills are valuable for DevOps, CI/CD Engineer, or Software Developer roles.</p>
+                      <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
                     </td>
+                    <tr data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">
+                      <th scope="row"><center>Jan 8, 2024</center></th>
+                      <td>Google Cloud Platform&nbsp;<a href="#collapseTwo">Details</a></td>
+                      <td><center>Cloud</center></td>
+                      <td><center>Total 36 Hrs<br>16-18H GMT+1<br>Mon to Fri</center></td>
+                      <td><center>Online<center></td>
+                      <td><center>Beginner to intermediate</center></td>
+                      <td><center>899</center></td>
+                      <td><a class="btn-enroll href="https://api.konnect.network/kPBPC39QT">Enroll</a></td>
+                    </tr>
+                    <tr>
+                      <td colspan="8" id="collapseTwo" class="collapse acc" data-parent="#accordion">
+                        <p>This course is a series of hands-on workshops that will introduce you to a variety of Google cloud services and how to pick, configure, and deploy your code onto the right cloud solution.</p>
+                        <p>You’ll learn:</p>
+                        <ul>
+                          <li>VPC Networking.</li>                 
+                          <li>Compute Engine</li>
+                          <li>Cloud Functions</li>
+                          <li>Cloud Run</li>
+                          <li>Kubernetes Engine</li>
+                          <li>And much more!</li>
+                        </ul>
+                        <p>This course aligns with the requirements for the&nbsp;<a href="https://cloud.google.com/learn/certification/cloud-engineer">Cloud Associate Engineer</a>, <a href="https://cloud.google.com/learn/certification/cloud-developer">Professional Cloud Developer</a>&nbsp;and&nbsp;<a href="https://cloud.google.com/learn/certification/cloud-devops-engineer">Professional Cloud DevOps Engineer</a>&nbsp; certification exams from Google.</p>
+                        <a class="btn-enroll" href="https://api.konnect.network/kPBPC39QT">Enroll Now!</a>
+                      </td>
+                    </tr>
                   </tr>
-  
-                  <tr data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">
-                    <th scope="row">3</th>
-                    <td>Laptop Technology AS2020</td>
-                    <td>$200.00</td>
-                    <td>2</td>
-                    <td>$400.00</td>
-                    <td>
-                      <i class="fa" aria-hidden="false"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="6" id="collapseThree" class="collapse acc" data-parent="#accordion">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
-                    </td>
-                  </tr>
-  
-                  <tr data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">
-                    <th scope="row">4</th>
-                    <td>Laptop Technology AS2020</td>
-                    <td>$200.00</td>
-                    <td>2</td>
-                    <td>$400.00</td>
-                    <td>
-                      <i class="fa" aria-hidden="false"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="6" id="collapseFour" class="collapse acc" data-parent="#accordion">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iste, facere sunt sequi nostrum ipsa, amet doloremque magnam reiciendis tempore sapiente. Necessitatibus recusandae harum nam sit perferendis quia inventore natus.</p>
-                    </td>
-                  </tr>
-                </tbody>
+                  
               </table>
               <script src="assets/js/table.js"></script>
             </div>
@@ -305,7 +307,7 @@
         <div class="row">
           <div class="col-lg-9 text-center text-lg-start">
             <h3 class="cta-title">Save your spot in the next session</h3>
-            <p class="cta-text">Enroll in the next instructor-led Kubernetes training session and prepare for CKA & CKAD.</p>
+            <p class="cta-text">Enroll in the next instructor-led Kubernetes training session and prepare for your first Kubernetes certification exam.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="https://api.konnect.network/kPBPC39QT">Enroll</a>
