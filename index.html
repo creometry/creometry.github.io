@@ -283,7 +283,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3>Frequently Asked Questions</h3>
-          <p>Find answers to your question. If still curious? Then <a href="#contact">Drop us a message</a>!</p>
+          <p>Find answers to your question. If still curious? <a href="#contact">Drop us a message</a>!</p>
         </header>
 
         <ul class="faq-list" data-aso="fade-up" data-aos-delay="100">
@@ -319,7 +319,7 @@
             <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What kind of workloads can I deploy on creometry's cloud platform? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-              Creometry allows you to rcontainers run containers as kubernetes deployments and jobs, and planned support for multiple runtimes. Review supported workloads docs. 
+              Creometry allows you to run containers as kubernetes deployments and jobs, with planned support for multi-regional deployments and multiple container runtimes (containerd, WASM and Confidential container runtimes). Review supported workloads docs. 
               </p>
             </div>
           </li>
@@ -328,7 +328,7 @@
             <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Who is Creometry for? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Creometry is built for dervelopers who have limited access to public clouds, due to reasons ranging from low funding opportunities to <a href='https://en.wikipedia.org/wiki/Foreign_exchange_controls'>currency exchange controls</a>, which severely limits access to cloud resources. Creometry can also be a good fit for individuals and teams, startups and enterprises, researchers and consultants, students and freelancers, as long as they are interested in a low-cost Dev/Staging environments, or in leveraging the incentive system to A/B test and/or onboard early adopters of a new feature/application. Review use-cases.
+                Creometry is built for dervelopers who have limited access to public clouds, due to reasons ranging from low funding opportunities to <a href='https://en.wikipedia.org/wiki/Foreign_exchange_controls'>currency exchange controls</a>, which severely limits access to cloud resources. Creometry can also be a good fit for individuals and teams, startups and enterprises, researchers and consultants, students and freelancers, alike; as long as they are interested in a low-cost Kubernetes environments, or in leveraging the incentive system to A/B test and/or onboard early adopters of a new feature/application. Review use-cases.
               </p>
             </div>
           </li>
@@ -337,12 +337,19 @@
             <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Should I be concerned about the security of my applications running on untrusted hosts?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq6" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Creometry provides developers with the option to run <a href='https://github.com/confidential-containers'>confidential containers</a>, which isolate workloads and verify their integrity, in addtion to encrypting traffic and data. Although the number of undiscovered vultnerabilities is manageably small, <strong>we do not recommend running critical workloads or compute sensitive data on Creometry's network</strong>. Review Terms of use and example use-cases.
+                Creometry provides developers with the option to run <a href='https://github.com/confidential-containers'>confidential containers</a>, which isolate workloads and verify their integrity, in addtion to encrypting traffic and data. Although the number of discovered vultnerabilities is manageably small, <strong>we do not recommend running critical workloads or compute sensitive data on Creometry's network</strong>. Review Terms of use and example use-cases.
               </p>
             </div>
           
           </li>
-
+          <li>
+            <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">What type of nodes can I join to the network?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+              <p>
+              Whether it's a cloud-based VM, a single board computer, a workstation, or an on-prem hardware, you can join any compute hardware as long as it runs on a architecture/OS supported by Kubernetes nodes (i.e. Linux/Windows AMD64, Linux arm64, etc.). Review supported nodes in docs.
+              </p>
+            </div>
+          </li>
         </ul>
       </div> 
     </section>
