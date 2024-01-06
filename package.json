@@ -1,0 +1,19 @@
+{
+  "name": "creometry.github.io",
+  "version": "1.0.0",
+  "description": "Creometry's organization website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creometry/creometry.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/creometry/creometry.github.io/issues"
+  },
+  "homepage": "https://github.com/creometry/creometry.github.io#readme"
+}
