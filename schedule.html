@@ -144,7 +144,7 @@
       </div>
     </section> -->
     <!-- End Breadcrumbs -->
-    <section id="schedule">
+    <section id="trainings">
       
         <div class="container text-center">
           <h1><strong>Schedule</strong></h1>
@@ -307,11 +307,59 @@
         </div>
       
     </section>
-  	<script src="assets/js/table/jquery.min.js"></script>
-    <script src="assets/js/table/popper.js"></script>
-    <script src="assets/js/table/bootstrap.min.js"></script>
-    <script src="assets/js/table/main.js"></script>
-
+    <section id="webinars">
+      <div class="container text-center">
+        <h1><strong>Upcoming Webinars</strong></h1>
+      </div>
+      
+      <h3 class="text-center">Get insights from the community</h3>
+      
+      <div class="container" id="webinar-container">
+        <!-- Event boxes will be dynamically inserted here -->
+      </div>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script>
+        // Fetch data from the Google Apps Script API as soon as the page loads
+        $(document).ready(function () {
+          $.ajax({
+            url: 'https://script.google.com/macros/s/AKfycbySY_ZIlIdg0m9uWLOhcnOcNc-G73MTV0EZmGyeCjmSSvj5YEDrN0pI_UGPb5FBQUjGLw/exec',
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+              // Process the fetched data and create event boxes
+              processEventData(data);
+            },
+            error: function (error) {
+              console.error('Error fetching data:', error);
+            }
+          });
+        });
+    
+        function processEventData(events) {
+          var container = $('#webinar-container');
+    
+          events.forEach(function (event) {
+            // Format the start time in a human-readable format
+            var startDate = new Date(event.start);
+            var formattedStartDate = startDate.toLocaleString('en-US', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric',
+              timeZoneName: 'short'
+            });
+    
+            // Create a new event box using Bootstrap classes
+            var eventBox = $('<div class="card mb-4"><div class="card-body"><h5 class="card-title">' + event.summary + '</h5><p class="card-text">' + event.description + '</p><p class="card-text"><small class="text-muted">Start Time: ' + formattedStartDate + '</small></p><a href="rsvp-page.html?id=' + event.id + '" class="btn btn-primary">RSVP</a><a href="' + event.htmlLink +'" class="btn btn-primary">add to calendar</a></div></div>');
+    
+            // Append the event box to the container
+            container.append(eventBox);
+          });
+        }
+      </script>
+    </section>
     <!-- ======= Call To Action Section ======= -->    
     <section id="call-to-action" class="call-to-action">
       <div class="container" data-aos="zoom-out">
@@ -328,36 +376,7 @@
       </div>
     </section>
     <!--  End Call To Action Section -->
-    <!-- ======= About Section ======= -->
-    <!-- <section id="course" class="course">
 
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-5 col-md-6">
-            <div class="about-img" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/about-ecosystem.png" alt="about-ecosystem">
-            </div>
-          </div> 
-
-          <div class="col-lg-7 col-md-6">
-            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-              <h2>Courses</h2>
-              <p>Creometry is a socio-technical ecosystem that applies commoning<a href="#faq"><sup>1</sup></a> practices to digital infrastructure, specifiacally compute infrastructure<a href="#faq"><sup>2</sup></a> (aka. the cloud).</p>
-              <p>Community volunteers share computing resources and host cloud applications, in exchange for digital value incentives<a href="#faq"><sup>3</sup></a>.</p>
-               <h3>Other than the sun, what's up?</h3>
-              <p>In order to develop the ecosystem and grow the community, the following services are intended to support individuals and projects, and govern economic interests:</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> An academy serving as a technology training ground for developers and independent contributors.</li>
-                <li><i class="bi bi-check-circle"></i> A open community incubator to support the development of project initiatives.</li>
-                <li><i class="bi bi-check-circle"></i> An incentive-driven economic model<a href="#faq"><sup>3</sup></a>  to establish economic governance mecanisms.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section> -->
-    <!-- End course Section -->
   </main>
   <!-- End #main -->
 
@@ -431,26 +450,12 @@
                     <li><a href="https://creometry.com/consulting">Consulting services</a></li>
                     <li><a href="https://creometry.com/blog">Blog</a></li>
                     <li><a href="https://creometry.com/docs">Documentation</a></li>
-                    <li><a href="https://creometry.com/schedule#tainings">Trainings</a></li>
-                    <li><a href="https://creometry.com/schedule#webinars">Webinars</a></li>
+                    <li><a href="#trainings">Trainings</a></li>
+                    <li><a href="#webinars">Webinars</a></li>
                     <li><a href="https://creometry.com/terms">Terms</a></li>
                     <li><a href="https://creometry.com/privacy">Privacy</a></li>
                   </ul>
                 </div>
-<!-- 
-                <div class="footer-links">
-                  <h4>Say hello!</h4>
-                  <p>
-                    A108 Adam Street <br>
-                    New York, NY 535022<br>
-                    United States <br>
-                    <strong>Phone:</strong> +1 xxxxxxx<br> 
-                    
-                  </p>
-                </div> -->
-
-                
-
               </div>
 
             </div>
@@ -529,7 +534,10 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="assets/js/table/jquery.min.js"></script>
+  <script src="assets/js/table/popper.js"></script>
+  <script src="assets/js/table/bootstrap.min.js"></script>
+  <script src="assets/js/table/main.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
