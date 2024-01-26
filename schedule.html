@@ -53,6 +53,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -131,19 +133,7 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
 
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Inner Page</li>
-        </ol>
-        <h2>Inner Page</h2>
-
-      </div>
-    </section> -->
-    <!-- End Breadcrumbs -->
     <section id="trainings">
       
         <div class="container text-center">
@@ -318,7 +308,9 @@
         <!-- Event boxes will be dynamically inserted here -->
       </div>
     
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
+      <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
       <script>
         // Fetch data from the Google Apps Script API as soon as the page loads
         $(document).ready(function () {
@@ -339,27 +331,60 @@
         function processEventData(events) {
           var container = $('#webinar-container');
     
-          events.forEach(function (event) {
-            // Format the start time in a human-readable format
-            var startDate = new Date(event.start);
-            var formattedStartDate = startDate.toLocaleString('en-US', {
-              month: 'long',
-              day: 'numeric',
-              year: 'numeric',
-              hour: 'numeric',
-              minute: 'numeric',
-              timeZoneName: 'short'
-            });
-    
-            // Create a new event box using Bootstrap classes
-            var eventBox = $('<div class="card mb-4"><div class="card-body"><h5 class="card-title">' + event.summary + '</h5><p class="card-text">' + event.description + '</p><p class="card-text"><small class="text-muted">Start Time: ' + formattedStartDate + '</small></p><a href="rsvp-page.html?id=' + event.id + '" class="btn btn-primary">RSVP</a><a href="' + event.htmlLink +'" class="btn btn-primary">add to calendar</a></div></div>');
-    
-            // Append the event box to the container
-            container.append(eventBox);
-          });
-        }
-      </script>
-    </section>
+          // Create a new event table using Bootstrap classes and DataTables
+      var eventTable = $('<table class="table table-striped" id="eventDataTable"></table>');
+
+// Create table head with column names
+var tableHead = $('<thead><tr><th>Title</th><th>Description</th><th>Add to Calendar</th><th>RSVP</th></tr></thead>');
+eventTable.append(tableHead);
+
+// Create table body
+var tableBody = $('<tbody></tbody>');
+
+events.forEach(function (event) {
+  // Format the start time in a human-readable format
+  var startDate = new Date(event.start);
+  var formattedStartDate = startDate.toLocaleString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    timeZoneName: 'short'
+  });
+
+  // Create a new table row for each event
+  var eventRow = $('<tr></tr>');
+
+  // Create cells for the title and description in the first column
+  var titleCell = $('<td><strong>' + event.summary + '</strong></td>');
+  var descriptionCell = $('<td>' + event.description + '</td>');
+
+  // Create cells for the calendar icon and RSVP button in the second column
+  var calendarCell = $('<td><a href="' + event.htmlLink + '"><img src="calendar-icon.png" alt="Add to Calendar"></a></td>');
+  var rsvpCell = $('<td><a href="rsvp-page.html?id=' + event.id + '" class="btn btn-primary">RSVP</a></td>');
+
+  // Append cells to the row
+  eventRow.append(titleCell, descriptionCell, calendarCell, rsvpCell);
+
+  // Append the row to the table body
+  tableBody.append(eventRow);
+});
+
+// Append the table body to the table
+eventTable.append(tableBody);
+
+// Append the event table to the container
+container.append(eventTable);
+
+// Initialize DataTables for sorting
+$('#eventDataTable').DataTable({
+  responsive: true,
+  columnDefs: [{ type: 'date', targets: 3 }] // Assuming the date is in the fourth column
+});
+}
+</script>
+</section>
     <!-- ======= Call To Action Section ======= -->    
     <section id="call-to-action" class="call-to-action">
       <div class="container" data-aos="zoom-out">
